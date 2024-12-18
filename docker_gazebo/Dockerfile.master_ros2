@@ -47,7 +47,9 @@ RUN apt-get update && apt-get install -y \
     ros-${ROS_DISTRO}-gazebo-ros \
     ros-${ROS_DISTRO}-gazebo-ros2-control \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \  
-    ros-${ROS_DISTRO}-rqt-robot-steering \        
+    ros-${ROS_DISTRO}-rqt-robot-steering \  
+    ros-${ROS_DISTRO}-turtlebot3-navigation2 \
+    ros-${ROS_DISTRO}-slam-toolbox \        
     && rm -rf /var/lib/apt/lists/*
 
 
