@@ -2,9 +2,9 @@
 # This script is to create a docker image from the Dockerfile.
 
 # Set the image name as a variable here
-IMAGE_NAME="$1"  #Setting the name of the image as argument
-ROS_WS="$2"  #Setting name of the host PC ROS workspace folder
-USER_NAME="$3"  #Assigning the host user name to the docker  
+IMAGE_NAME="ros2_sim:v0.1"  #Setting the name of the image as argument
+ROS_WS="master_ros2_ws"  #Setting name of the host PC ROS workspace folder
+USER_NAME="robot"  #Assigning the host user name to the docker  
 
 
 # Build the Docker image with the specified image name

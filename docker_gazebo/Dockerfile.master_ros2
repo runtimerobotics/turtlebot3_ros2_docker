@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     python3-colcon-common-extensions \
     python3-vcstool \
+    nano \
     && rm -rf /var/lib/apt/lists/*
 
 
@@ -65,6 +66,12 @@ RUN echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 RUN mkdir -p $HOME/.gazebo/models
 
 COPY models $HOME/.gazebo/models
+
+# Hospital world and launch file updated
+
+COPY hospital.world /opt/ros/humble/share/turtlebot3_gazebo/worlds/
+
+COPY turtlebot3_hospital.launch.py /opt/ros/humble/share/turtlebot3_gazebo/launch/
 
 # Copy ros ws entry point
 COPY ros_ws_entrypoint.sh /ros_ws_entrypoint.sh

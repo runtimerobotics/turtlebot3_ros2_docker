@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CONTAINER_NAME="$1" #name of container which you created earlier, by running "create_container.sh" file.
+CONTAINER_NAME="ros2_dev" #name of container which you created earlier, by running "create_container.sh" file.
 
 # Enable access control for X server to avoid GUI issues
 xhost +local:docker

@@ -1,9 +1,9 @@
 #!/bin/sh
 
 
-DOCKER_IMAGE="$1"  # Name of the Docker image.
-ROS2_WS_NAME="$2"    #ROS2 ws name
-CONTAINER_NAME="$3"  # Name of the container you want to create.
+DOCKER_IMAGE="ros2_sim:v0.1"  # Name of the Docker image.
+ROS2_WS_NAME="master_ros2_ws"    #ROS2 ws name
+CONTAINER_NAME="ros2_dev"  # Name of the container you want to create.
 
 
 HOST_WS_PATH="/home/$USER/$ROS2_WS_NAME/src"  # Path to your workspace on the host.
