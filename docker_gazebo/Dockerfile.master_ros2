@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
+
 # Install MoveIt 2, ROS 2 Control, and their dependencies
 RUN apt-get update && apt-get install -y \
     ros-${ROS_DISTRO}-turtlebot3* \
@@ -53,6 +54,7 @@ RUN apt-get update && apt-get install -y \
     ros-${ROS_DISTRO}-slam-toolbox \        
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt upgrade -y    
 
 
 # Set ownership to user
