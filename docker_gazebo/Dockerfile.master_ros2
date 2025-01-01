@@ -78,6 +78,10 @@ COPY burger.yaml /opt/ros/humble/share/turtlebot3_navigation2/param/
 COPY map.pgm /${HOME}/
 COPY map.yaml /${HOME}/
 
+#Copying the main navigation code
+COPY bring_medicine.py /${HOME}/
+
+
 # Copy ros ws entry point
 COPY ros_ws_entrypoint.sh /ros_ws_entrypoint.sh
 
