@@ -70,12 +70,13 @@ RUN mkdir -p $HOME/.gazebo/models
 COPY models $HOME/.gazebo/models
 
 # Hospital world and launch file updated
-
 COPY hospital.world /opt/ros/humble/share/turtlebot3_gazebo/worlds/
-
 COPY turtlebot3_hospital.launch.py /opt/ros/humble/share/turtlebot3_gazebo/launch/
-
 COPY burger.yaml /opt/ros/humble/share/turtlebot3_navigation2/param/
+
+# Copying the map file
+COPY map.pgm /${HOME}/
+COPY map.yaml /${HOME}/
 
 # Copy ros ws entry point
 COPY ros_ws_entrypoint.sh /ros_ws_entrypoint.sh
