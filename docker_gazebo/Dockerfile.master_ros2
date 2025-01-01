@@ -81,12 +81,17 @@ COPY map.yaml /${HOME}/
 #Copying the main navigation code
 COPY bring_medicine.py /${HOME}/
 
+# Copy the shell script
+COPY start_sim.sh /${HOME}/
+COPY start_nav.sh /${HOME}/
+COPY start_app.sh /${HOME}/
+
 
 # Copy ros ws entry point
 COPY ros_ws_entrypoint.sh /ros_ws_entrypoint.sh
 
 
-WORKDIR $ROS_WS
-
+#WORKDIR $ROS_WS
+WORKDIR ${HOME}
 # Entrypoint
 ENTRYPOINT ["/ros_entrypoint.sh"]
